@@ -24,9 +24,9 @@ type car = {
 export const useCars3Store = defineStore('cars3', () => {
   const demoCars3 = ref([
     {
-      id: 'demo2',
+      id: 'demo3',
       brand: 'Toyota',
-      model: 'Land Cruiser',
+      model: 'Land Cruiser 200',
       mileageHistory: [
         {
           mileage: 12958,

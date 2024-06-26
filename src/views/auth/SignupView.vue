@@ -27,9 +27,9 @@ const isButtonActive = computed(()=>{
     <div>
       <h1 class="mt-40 text-4xl font-bold text-gray-200">Регистрация</h1>
       <div class="flex flex-col justify-center mt-12 gap-4">
-        <NInput size="large" placeholder="Как к вам обращаться?" id="autohelper-email" v-model:value="credentials.email"/>
+        <NInput size="large" placeholder="Как к вам обращаться?" id="autohelper-email"/>
         <NInput size="large" placeholder="Электронная почта" id="autohelper-email" v-model:value="credentials.email"/>
-        <NInput size="large" placeholder="Пароль" type="password" id="autohelper-password" v-model:value="credentials.password"/>
+        <NInput size="large" placeholder="Пароль" type="password" id="autohelper-password" />
         <NInput size="large" placeholder="Повторите пароль" type="password" id="autohelper-password" v-model:value="credentials.password"/>
         <NButton size="large" tertiary :disabled="!(credentials?.email && credentials?.password)" @click="$router.push('/carlist')"> Продолжить</NButton>
         <span class="text-sm self-center mt-12">Уже есть аккаунт?</span>

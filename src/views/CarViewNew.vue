@@ -4,12 +4,12 @@ import { mdiArrowLeft, mdiCarWash, mdiGasStation, mdiParking, mdiToolbox, mdiBan
 import SvgIcon from '@jamescoyle/vue-icon';
 
 import { NButton } from 'naive-ui'
-import { useAuthStore, useCars3Store, useInvoiceStore } from '@/stores';
+import { useAuthStore, useCars4Store, useInvoiceStore } from '@/stores';
 import router from '@/router';
 
 const {demo} = useAuthStore()
 
-const car = demo? useCars3Store().demoCars3.find( car => car.id === router.currentRoute.value.params.id ) : useCars3Store().cars3.find( car => car.id === router.currentRoute.value.params.id )
+const car = demo? useCars4Store().demoCars4.find( car => car.id === router.currentRoute.value.params.id ) : useCars4Store().cars4.find( car => car.id === router.currentRoute.value.params.id )
 
 
 function toInvoice(title: string) {
@@ -83,20 +83,20 @@ const menus = [
 <template>
   <div class="p-6">
     <div>
-      <n-button text  @click="$router.push('/cars')">
+      <n-button text  @click="$router.push('/carlist')">
         <template #icon>
           <svg-icon :path="mdiArrowLeft" type="mdi"/>
         </template>
         Мои автомобили
       </n-button>
       <div class="carView flex flex-col mt-12 gap-2">
-        <img src="/TY.png" />
+        <img src="/UnknownAuto.png" />
         <div class="flex flex-col gap-2">
-          <span class="text-xl text-white font-semibold">Toyota Land Cruiser 200</span>
-          <span> Пробег 115 575 км</span>
+          <span class="text-xl text-white font-semibold">Mitsubishi Lancer X</span>
+          <span> Пробег 155 555 км</span>
           <div class="flex flex-row gap-2 items-center">
             <div class="h-2 w-2 rounded-full bg-[#FFAC0A]"></div>
-              <span> Последнее ТО - 6 285 км назад (25.05.2024)</span>
+              <span> Последнее ТО - 0 км назад (-)</span>
           </div>
         </div>
       </div>
